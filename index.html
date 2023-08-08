@@ -8,17 +8,17 @@
 </head>
 <body id="body">
     <div class="container">
-        <div id="question_container">
+        <div id="question_container" class="hide">
             <div id="question">Question</div>
             <div id="answer_buttons">
-                <button class="answer">Answer 1</button>
+                
             </div>
         </div>
         <div class="control_buttons">
             <button id="start" class="start_btn btn">
                 Start
             </button>
-            <button id="next" class="next_btn btn">
+            <button id="next" class="next_btn btn hide">
                 Next
             </button>
         </div>
@@ -71,6 +71,21 @@
             }]
         }]
 
+        //START THE QUIZ
+        function start_quiz(){
+            start.addEventListener('click', ()=>{
+                current_number=0;
+                question_container.classList.remove('hide');
+                start.classList.add('hide');
+                shuffled=questions.sort(()=>Math.random() -.5)
+                Nextquestion();
+            })
+            console.log('Quiz has started')
+        }
+        start_quiz()
+        function Nextquestion(){
+            
+        }
     </script>
 </body>
 </html>
