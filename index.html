@@ -77,14 +77,35 @@
                 current_number=0;
                 question_container.classList.remove('hide');
                 start.classList.add('hide');
-                shuffled=questions.sort(()=>Math.random() -.5)
+                shuffled=questions.sort(()=> Math.random()- .5)
                 Nextquestion();
-            })
+            });
             console.log('Quiz has started')
         }
+
+
+
+        //NEXT QUESTION
         start_quiz()
         function Nextquestion(){
-            
+            reset_state()
+            Showquestion(shuffled[current_number])
+        }
+
+        //SHOW QUESTION
+        function Showquestion(question_par){
+            question_printed.textContent=question_par.question;
+            question_par.answers.forEach(answer_part =>{
+                const button=document.createElement('button')
+                button.innerHTML=answer_part.text;
+                button.classList.add('btn');
+                answers.appendChild(button)
+            });
+        }
+
+        //RESET STATE
+        function reset_state(){
+
         }
     </script>
 </body>
