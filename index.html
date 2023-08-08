@@ -24,7 +24,53 @@
         </div>
     </div>
     <script>
-        
+        const start=document.getElementById('start');
+        const question_container=document.getElementById('question_container');
+        const question_printed=document.getElementById('question');
+        const answers=document.getElementById('answer_buttons');
+        const next=document.getElementById('next');
+        const body=document.getElementById('body');
+        let shuffled,current_number;
+
+        const questions=[
+        {
+            question: 'What are you learning right now?',
+            answer:[
+            {
+                text:'javascript', correct:true
+            },
+            {
+                text:'HTML5', correct:false
+            },
+            {
+                text:'CSS3', correct:false
+            }],
+
+            question: 'Do you like winter?',
+            answer:[
+            {
+                text:'YES', correct:true
+            },
+            {
+                text:'NO', correct:true
+            }],
+
+            question: 'Do you love js?',
+            answer:[
+            {
+                text:'indeed', correct:true
+            },
+            {
+                text:'NO', correct:false
+            },
+            {
+                text:'KINDA', correct:false
+            },
+            {
+                text:'NOT REALY', correct:false
+            }]
+        }]
+
     </script>
 </body>
 </html>
