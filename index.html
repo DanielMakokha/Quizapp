@@ -35,7 +35,7 @@
         const questions=[
         {
             question: 'What are you learning right now?',
-            answer:[
+            answers:[
             {
                 text:'javascript', correct:true
             },
@@ -47,7 +47,7 @@
             }],
 
             question: 'Do you like winter?',
-            answer:[
+            answers:[
             {
                 text:'YES', correct:true
             },
@@ -56,7 +56,7 @@
             }],
 
             question: 'Do you love js?',
-            answer:[
+            answers:[
             {
                 text:'indeed', correct:true
             },
@@ -82,13 +82,13 @@
             });
             console.log('Quiz has started')
         }
-
+        start_quiz()
 
 
         //NEXT QUESTION
-        start_quiz()
+        
         function Nextquestion(){
-            reset_state()
+            reset_state();
             Showquestion(shuffled[current_number])
         }
 
